@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="lexend lg:min-h-screen">
+    <header class="sticky top-0 backdrop-filter backdrop-blur">
+      <nav
+        class="bg-[#FFEEE6] grid grid-rows-3 items-center lg:flex lg:justify-between lg:px-[137px] lg:pb-10 lg:pt-6 px-4 py-4 flex-nowrap top-0"
+      >
+        <!-- blog-button -->
+        <button
+          onclick="window.location.href = 'blog.html'"
+          class="font-bold bg-[#B4F461] px-8 py-4 rounded-xl hover:bg-[#a3e635] items-start"
+        >
+          Blog
+        </button>
+        <!-- donate-bd-logo -->
+        <div class="flex items-center justify-center">
+          <img class="p-2" src="./assets/logo.png" alt="" />
+          <span class="font-bold">Donate Bangladesh</span>
+        </div>
+        <!-- available-amount -->
+        <div class="flex items-center justify-center">
+          <img class="p-2" src="./assets/coin.png" alt="" />
+          <span class="text-gray-500 font-medium">5500BDT</span>
+        </div>
+      </nav>
+
+      <!-- buttons-section -->
+      <section class="py-6 px-6 lg:py-8">
+        <div class="flex justify-center gap-4">
+          <button
+            onclick="colored"
+            class="font-bold px-8 py-4 rounded-xl bg-[#B4F461] hover:bg-[#a3e635]"
+          >
+            Donation
+          </button>
+          <button
+            onclick="colored"
+            class="font-medium text-gray-500 border-2 solid border-gray-300 bg-transparent px-8 py-4 rounded-xl"
+          >
+            History
+          </button>
+        </div>
+      </section>
+    </header>
+
+    <script src="js/buttons.js"></script>
+  </body>
+</html>
