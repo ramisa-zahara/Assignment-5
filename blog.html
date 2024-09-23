@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate Bangladesh</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .lexend {
+        font-family: "Lexend", sans-serif;
+      }
+    </style>
+  </head>
+  <body class="lexend">
+    <header class="sticky top-0">
+      <nav
+        class="bg-[#FFEEE6] grid grid-rows-3 items-center lg:flex lg:justify-between position:sticky lg:px-[137px] lg:pb-10 lg:pt-6 px-4 py-4"
+      >
+        <!-- home-button -->
+        <button
+          onclick="window.location.href = 'index.html'"
+          class="font-bold bg-[#B4F461] px-8 py-4 rounded-xl hover:bg-[#a3e635] items-start"
+        >
+          Home
+        </button>
+        <!-- donate-bd-logo -->
+        <div class="flex items-center justify-center">
+          <img class="p-2" src="./assets/logo.png" alt="" />
+          <span class="font-bold">Donate Bangladesh</span>
+        </div>
+        <!-- available-amount -->
+        <div class="flex items-center justify-center">
+          <img class="p-2" src="./assets/coin.png" alt="" />
+          <span class="text-gray-500 font-medium">5500BDT</span>
+        </div>
+      </nav>
+    </header>
+
+    <!-- main-sections -->
+    <main class="lg:py-[80px] lg:px-[150px] py-8 px-6">
+      <!-- FAQ -->
+      <div>
+        <h2 class="font-extrabold text-4xl items-start pb-6">Important FAQ</h2>
+        <div
+          class="grid gap-2 px-8 py-8 bg-white drop-shadow-lg relative rounded-xl"
+        >
+          <div id="dropdown" class="flex justify-between">
+            <!-- question-button -->
+            <button
+              id="make-q1"
+              class="q-btn hover:bg-gray-50"
+              onclick="toggleDropdown()"
+            >
+              What is the Document Object Model(DOM)?
+            </button>
+            <svg
+              class="-mr-1 h-5 w-5 text-gray-400"
+              viewBox="0 0 20 20"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z"
+                clip-rule="evenodd"
+              />
+            </svg>
+          </div>
+          <a
+            href="#"
+            id="question-1"
+            class="q-dropdown px-4 py-8 text-gray-700 hidden"
+          >
+            The Document Object Model (DOM) is a programming interface for web
+            documents. It represents the structure of a web page as a tree of
+            objects, where each node corresponds to elements, attributes, and
+            content. Through the DOM, scripts like JavaScript can dynamically
+            access, modify, add, or delete elements in a web page, allowing for
+            interactive and dynamic content.
+          </a>
+        </div>
+      </div>
+    </main>
+    <script src="js/questions.js"></script>
+  </body>
+</html>
