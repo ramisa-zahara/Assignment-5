@@ -12,9 +12,9 @@ const donateButtonHandler = function(event)
     // const totalBDT= totalmoney-newbalance;
     // document.getElementById('total-balance').innerText=totalBDT;
     
-    if(newbalance <= totalmoney && newbalance>0 && newbalance!=NaN){
+    if(adddonationmoney <= totalmoney && newbalance>0 && newbalance!==NaN){
         document.getElementById('current-donation').innerText= newbalance;
-        const totalBDT= totalmoney-newbalance;
+        const totalBDT= totalmoney-adddonationmoney;
         document.getElementById('total-balance').innerText=totalBDT;
         document.getElementById('input-add-money').value=null;
         document.getElementById('my_modal_1').showModal()

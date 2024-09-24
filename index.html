@@ -222,11 +222,91 @@
           </div>
         </div>
       </section>
+
+      <!-- Qouta movement section -->
+      <section class="lg:p-8 p-4">
+        <!-- entire-section-div -->
+        <div class="grid lg:grid-cols-2 grid-cols-1">
+          <!-- image-div -->
+          <div>
+            <img src="./assets/quota-protest.png" alt="" />
+          </div>
+          <!-- contents-div -->
+          <div>
+            <div>
+              <!-- money added box -->
+              <div
+                class="flex items-center rounded-lg bg-gray-200 mx-24 lg:mx-auto lg:mt-auto lg:mr-[420px] mt-6 justify-center"
+              >
+                <img class="p-2" src="./assets/coin.png" alt="" />
+                <span
+                  id="current-donation-qouta"
+                  class="text-gray-500 font-medium"
+                  >2400</span
+                ><span class="text-gray-500 font-medium">BDT</span>
+              </div>
+
+              <!-- header and texts -->
+              <div class="pb-6 pt-4">
+                <h3 class="font-bold text-xl pb-4">
+                  Aid for Injured in the Quota Movement
+                </h3>
+                <span class="font-light">
+                  The recent Quota movement has resulted in numerous injuries
+                  and significant hardship for many individuals. Your support is
+                  crucial in providing medical assistance, rehabilitation, and
+                  necessary supplies to those affected. By contributing, you
+                  help ensure that injured individuals receive the care and
+                  support they need during this challenging time. Every donation
+                  plays a vital role in alleviating their suffering and aiding
+                  in their recovery. Please consider making a donation to
+                  support these brave individuals in their time of need.</span
+                >
+              </div>
+            </div>
+
+            <!-- textbox and btn div -->
+            <div class="grid grid-cols-1 gap-4">
+              <input
+                id="input-add-money3"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="border-2 solid border-gray-300 rounded-lg p-5"
+              />
+              <button
+                id="donate-now-btn-qouta"
+                class="font-bold px-8 py-4 rounded-xl bg-[#B4F461] hover:bg-[#a3e635]"
+              >
+                Donate Now
+              </button>
+              <dialog id="my_modal_3" class="modal">
+                <div class="modal-box">
+                  <h3 class="text-4xl font-extrabold text-center">
+                    Congrates!
+                  </h3>
+                  <img src="./assets/coin.png" alt="" class="px-[220px] pt-6" />
+                  <p class="py-4 text-center">You have donated for humankind</p>
+                  <p class="text-center font-bold text-xl">Successfully</p>
+
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn mr-[150px]" onclick="closePopUp()">
+                        Close Confirmation
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="js/buttons.js"></script>
     <script src="js/Noakhali-donation.js"></script>
     <script src="js/modal.js"></script>
     <script src="js/feni-donation.js"></script>
+    <script src="js/qouta-mov.js"></script>
   </body>
 </html>
