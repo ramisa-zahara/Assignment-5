@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Donate Bangladesh</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -38,7 +43,8 @@
         <!-- available-amount -->
         <div class="flex items-center justify-center">
           <img class="p-2" src="./assets/coin.png" alt="" />
-          <span class="text-gray-500 font-medium">5500BDT</span>
+          <span id="total-balance" class="text-gray-500 font-medium">5500</span
+          ><span class="text-gray-500 font-medium">BDT</span>
         </div>
       </nav>
 
@@ -46,14 +52,16 @@
       <section class="py-6 px-6 lg:py-8">
         <div class="flex justify-center gap-4">
           <button
-            onclick="colored"
-            class="font-bold px-8 py-4 rounded-xl bg-[#B4F461] hover:bg-[#a3e635]"
+            data-active="true"
+            onclick="colored(this)"
+            class="font-bold px-8 py-4 rounded-xl data-[active=true]:bg-[#B4F461] data-[active=true]:hover:bg-[#a3e635] data-[active=false]:text-gray-500 data-[active=false]:border-2 data-[active=false]:border-solid data-[active=false]:border-gray-300 data-[active=false]:bg-transparent"
           >
             Donation
           </button>
           <button
-            onclick="colored"
-            class="font-medium text-gray-500 border-2 solid border-gray-300 bg-transparent px-8 py-4 rounded-xl"
+            data-active="false"
+            onclick="colored(this)"
+            class="data-[active=true]:bg-[#B4F461] data-[active=true]:hover:bg-[#a3e635] font-medium data-[active=false]:text-gray-500 data-[active=false]:border-2 data-[active=false]:border-solid data-[active=false]:border-gray-300 data-[active=false]:bg-transparent px-8 py-4 rounded-xl"
           >
             History
           </button>
@@ -80,8 +88,8 @@
               >
                 <img class="p-2" src="./assets/coin.png" alt="" />
                 <span id="current-donation" class="text-gray-500 font-medium"
-                  >0BDT</span
-                >
+                  >0</span
+                ><span class="text-gray-500 font-medium">BDT</span>
               </div>
 
               <!-- header and texts -->
@@ -114,6 +122,24 @@
               >
                 Donate Now
               </button>
+              <dialog id="my_modal_1" class="modal">
+                <div class="modal-box">
+                  <h3 class="text-4xl font-extrabold text-center">
+                    Congrates!
+                  </h3>
+                  <img src="./assets/coin.png" alt="" class="px-[220px] pt-6" />
+                  <p class="py-4 text-center">You have donated for humankind</p>
+                  <p class="text-center font-bold text-xl">Successfully</p>
+
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn mr-[150px]" onclick="closePopUp()">
+                        Close Confirmation
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
             </div>
           </div>
         </div>
@@ -122,5 +148,6 @@
 
     <script src="js/buttons.js"></script>
     <script src="js/donation.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>

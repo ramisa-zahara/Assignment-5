@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+  </head>
+  <body>
+    <!-- <div class="relative flex justify-center items-center">
+      <button
+        onclick="showMenu(true)"
+        class="font-bold px-8 py-4 absolute z-0 rounded-xl bg-[#B4F461] hover:bg-[#a3e635] text-center justify-center align-middle"
+      >
+        Donate Now
+      </button> -->
+
+    <!-- Open the modal using ID.showModal() method -->
+    <button
+      id="donate-now-btn"
+      class="btn justify-center items-center font-bold px-8 py-4 rounded-xl bg-[#B4F461] hover:bg-[#a3e635]"
+      onclick="my_modal_1.showModal()"
+    >
+      Donate Now
+    </button>
+    <dialog id="my_modal_1" class="modal">
+      <div class="modal-box">
+        <h3 class="text-4xl font-extrabold text-center">Congrates!</h3>
+        <img src="./assets/coin.png" alt="" class="px-[220px] pt-6" />
+        <p class="py-4 text-center">You have donated for humankind</p>
+        <p class="text-center font-bold text-xl">Successfully</p>
+
+        <div class="modal-action">
+          <form method="dialog">
+            <!-- if there is a button in form, it will close the modal -->
+            <button class="btn mr-[150px]">Close Confirmation</button>
+          </form>
+        </div>
+      </div>
+    </dialog>
+    <!-- </div> -->
+  </body>
+</html>
