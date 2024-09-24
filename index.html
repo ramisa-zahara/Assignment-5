@@ -144,10 +144,89 @@
           </div>
         </div>
       </section>
+
+      <!-- feni-donation -->
+      <section class="lg:p-8 p-4">
+        <!-- entire-section-div -->
+        <div class="grid lg:grid-cols-2 grid-cols-1">
+          <!-- image-div -->
+          <div>
+            <img src="./assets/feni.png" alt="" />
+          </div>
+          <!-- contents-div -->
+          <div>
+            <div>
+              <!-- money added box -->
+              <div
+                class="flex items-center rounded-lg bg-gray-200 mx-24 lg:mx-auto lg:mt-auto lg:mr-[420px] mt-6 justify-center"
+              >
+                <img class="p-2" src="./assets/coin.png" alt="" />
+                <span
+                  id="current-donation-feni"
+                  class="text-gray-500 font-medium"
+                  >600</span
+                ><span class="text-gray-500 font-medium">BDT</span>
+              </div>
+
+              <!-- header and texts -->
+              <div class="pb-6 pt-4">
+                <h3 class="font-bold text-xl pb-4">
+                  Donate for Flood Relief in Feni,Bangladesh
+                </h3>
+                <span class="font-light">
+                  The recent floods in Feni have devastated local communities,
+                  leading to severe disruption and loss. Your generous donation
+                  will help provide immediate aid, including food, clean water,
+                  and medical supplies, to those affected by this calamity.
+                  Together, we can offer crucial support and help rebuild lives
+                  in the aftermath of this disaster. Every contribution counts
+                  towards making a real difference. Please consider donating
+                  today to assist those in urgent need.</span
+                >
+              </div>
+            </div>
+
+            <!-- textbox and btn div -->
+            <div class="grid grid-cols-1 gap-4">
+              <input
+                id="input-add-money2"
+                type="text"
+                placeholder="Write Donation Amount"
+                class="border-2 solid border-gray-300 rounded-lg p-5"
+              />
+              <button
+                id="donate-now-btn-feni"
+                class="font-bold px-8 py-4 rounded-xl bg-[#B4F461] hover:bg-[#a3e635]"
+              >
+                Donate Now
+              </button>
+              <dialog id="my_modal_2" class="modal">
+                <div class="modal-box">
+                  <h3 class="text-4xl font-extrabold text-center">
+                    Congrates!
+                  </h3>
+                  <img src="./assets/coin.png" alt="" class="px-[220px] pt-6" />
+                  <p class="py-4 text-center">You have donated for humankind</p>
+                  <p class="text-center font-bold text-xl">Successfully</p>
+
+                  <div class="modal-action">
+                    <form method="dialog">
+                      <button class="btn mr-[150px]" onclick="closePopUp()">
+                        Close Confirmation
+                      </button>
+                    </form>
+                  </div>
+                </div>
+              </dialog>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
     <script src="js/buttons.js"></script>
-    <script src="js/donation.js"></script>
+    <script src="js/Noakhali-donation.js"></script>
     <script src="js/modal.js"></script>
+    <script src="js/feni-donation.js"></script>
   </body>
 </html>
