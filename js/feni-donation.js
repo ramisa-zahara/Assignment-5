@@ -11,7 +11,11 @@ const donateButtonHandlerfeni = function (event) {
   // const totalBDT= totalmoney-newbalance;
   // document.getElementById('total-balance').innerText=totalBDT;
 
-  if (adddonationmoney <= totalmoney && newbalance > 0 && newbalance !== NaN) {
+  if (
+    adddonationmoney <= totalmoney &&
+    adddonationmoney > 0 &&
+    adddonationmoney !== NaN
+  ) {
     document.getElementById("current-donation-feni").innerText = newbalance;
     const totalBDT = totalmoney - adddonationmoney;
     document.getElementById("total-balance").innerText = totalBDT;
